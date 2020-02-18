@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
+
+
+            <TableRow android:gravity="start"
+                      android:background="@color/dark_green">
+
+                <TextView
+                        android:text="@string/feature_name"
+                        style="@style/txtFeatureName"/>
+
+                <TextView
+                        android:text="@string/feature_status"
+                        style="@style/txtFeatureName"/>
+
+            </TableRow>
+
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorWhite">
+
+
+                <TextView
+
+                        android:drawableLeft="@drawable/ic_battery_type"
+                        android:drawablePadding="10dp"
+                        android:text="@string/battery_type"
+                        style="@style/txtfeatureNameStyle"/>/>
+
+
+                <TextView
+                        android:id="@+id/tv_battery_type"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorDriver">
+
+
+                <TextView
+
+                        android:drawableLeft="@drawable/ic_hydro_power"
+                        android:drawablePadding="10dp"
+                        android:text="@string/power_source"
+                        style="@style/txtfeatureNameStyle"/>/>
+
+
+                <TextView
+                        android:id="@+id/tv_power_source"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorWhite">
+
+
+                <TextView
+
+                        android:drawableLeft="@drawable/ic_ecological_solar_power_for_a_battery"
+                        android:drawablePadding="10dp"
+                        android:text="@string/battery_temperature"
+                        style="@style/txtfeatureNameStyle"/>/>
+
+
+                <TextView
+                        android:id="@+id/tv_battery_temperature"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorDriver">
+
+
+                <TextView
+
+                        android:drawableLeft="@drawable/ic_icon"
+                        android:drawablePadding="10dp"
+                        android:text="@string/battery_voltage"
+                        style="@style/txtfeatureNameStyle"/>/>
+
+
+                <TextView
+                        android:id="@+id/tv_battery_voltage"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorWhite">
+
+
+                <TextView
+
+                        android:drawableLeft="@drawable/ic_battery_scale"
+                        android:drawablePadding="10dp"
+                        android:text="@string/battery_voltage"
+                        style="@style/txtfeatureNameStyle"/>/>
+
+
+                <TextView
+                        android:id="@+id/tv_battery_scale"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorDriver">
+
+
+                <TextView
+
+                        android:drawableLeft="@drawable/ic_drop_of_liquid"
+                        android:drawablePadding="10dp"
+                        android:text="@string/battery_health"
+                        style="@style/txtfeatureNameStyle"/>/>
+
+
+                <TextView
+                        android:id="@+id/tv_battery_health"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+
+        </TableLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

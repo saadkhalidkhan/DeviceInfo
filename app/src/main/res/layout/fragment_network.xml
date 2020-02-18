@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:airbnb="http://schemas.android.com/apk/res-auto"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/height_width_10dp"
+            app:cardUseCompatPadding="true">
+
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <TableRow android:gravity="start"
+                      android:background="@color/dark_sky_blue">
+
+                <TextView
+                        android:text="@string/feature_name"
+                        style="@style/txtFeatureName"/>
+
+                <TextView
+                        android:text="@string/feature_status"
+                        style="@style/txtFeatureName"/>
+
+            </TableRow>
+
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorWhite">
+
+                <TextView
+                        android:text="@string/connection_status"
+                        style="@style/txtfeatureNameStyle"/>
+
+                <TextView
+                        android:id="@+id/tv_connection_status"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorDriver">
+
+                <TextView
+                        android:text="@string/data_type"
+                        style="@style/txtfeatureNameStyle"/>
+
+                <TextView
+                        android:id="@+id/tv_data_type"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorWhite">
+
+                <TextView
+                        android:text="@string/network_type"
+                        style="@style/txtfeatureNameStyle"/>
+
+                <TextView
+                        android:id="@+id/tv_network_type"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorDriver">
+
+                <TextView
+                        android:text="@string/ip_address"
+                        style="@style/txtfeatureNameStyle"/>
+
+                <TextView
+                        android:id="@+id/tv_ip_address"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+            <TableRow android:gravity="start"
+                      android:background="@color/colorWhite">
+
+                <TextView
+                        android:text="@string/mac_address"
+                        style="@style/txtfeatureNameStyle"/>
+
+                <TextView
+                        android:id="@+id/tv_mac_address"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorDriver">
+
+                <TextView
+                        android:text="@string/ssid"
+                        style="@style/txtfeatureNameStyle"/>
+
+                <TextView
+                        android:id="@+id/tv_ssid"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+
+            <TableRow android:gravity="start"
+                      android:background="@color/colorWhite">
+
+                <TextView
+                        android:text="@string/link_speed"
+                        style="@style/txtfeatureNameStyle"/>
+
+                <TextView
+                        android:id="@+id/tv_link_speed"
+                        style="@style/txtfeatureStyle"/>
+
+            </TableRow>
+
+
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
