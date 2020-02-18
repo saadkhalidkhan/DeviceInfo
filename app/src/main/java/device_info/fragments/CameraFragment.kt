@@ -72,8 +72,8 @@ class CameraFragment : BaseFragment(), View.OnClickListener {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val window = activity!!.window
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.statusBarColor = resources.getColor(R.color.dark_green_blue)
-            window.navigationBarColor = resources.getColor(R.color.dark_green_blue)
+            window.statusBarColor = ContextCompat.getColor(context!!, R.color.colorPrimary)
+            window.navigationBarColor = ContextCompat.getColor(context!!, R.color.colorPrimary)
 
         }
         ivMenu = view.findViewById(R.id.iv_menu)

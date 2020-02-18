@@ -9,15 +9,18 @@ import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+
 import androidx.annotation.Nullable;
 
 import com.droidgeeks.deviceinfo.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import androidx.fragment.app.Fragment;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import android.view.*;
 import android.widget.TextView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -29,8 +32,6 @@ import device_info.waveview.WaveView;
  * A simple {@link Fragment} subclass.
  */
 public class BatteryFragment extends BaseFragment {
-
-
 
 
     Unbinder unbinder;
@@ -121,8 +122,8 @@ public class BatteryFragment extends BaseFragment {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getActivity().getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(getResources().getColor(R.color.dark_green));
-            window.setNavigationBarColor(getResources().getColor(R.color.dark_green));
+            window.setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+            window.setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
         }
 
         IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
@@ -166,6 +167,7 @@ public class BatteryFragment extends BaseFragment {
         final Handler handler = new Handler();
         final Runnable runnable = new Runnable() {
             int counter = 0;
+
             @Override
             public void run() {
                 try {
@@ -215,11 +217,6 @@ public class BatteryFragment extends BaseFragment {
             tvPowerSource.setText(mResources.getString(R.string.battery));
         }
     }
-
-
-
-
-
 
 
     @Override

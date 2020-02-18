@@ -1,83 +1,83 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                xmlns:wave="wave"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"
-                android:orientation="vertical"
-                tools:context="device_info.activity.HomeActivity"
-                tools:ignore="NamespaceTypo">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wave="wave"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    tools:context="device_info.activity.HomeActivity"
+    tools:ignore="NamespaceTypo">
 
 
     <RelativeLayout
-            android:id="@+id/ll_top"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:orientation="vertical">
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
 
         <device_info.waveview.WaveView
-                android:id="@+id/progressBar"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="?attr/colorPrimary"
-                wave:above_wave_color="@color/light_blue_500"
-                wave:blow_wave_color="@color/cyan_500"
-                wave:wave_height="large"
-                wave:wave_hz="normal"
-                wave:wave_length="large"/>
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="?attr/colorPrimary"
+            wave:above_wave_color="@color/light_blue_500"
+            wave:blow_wave_color="@color/cyan_500"
+            wave:wave_height="large"
+            wave:wave_hz="normal"
+            wave:wave_length="large" />
 
         <ProgressBar
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:layout_gravity="center_horizontal"/>
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
 
         <TextView
-                android:id="@+id/tv_battery_level"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:fontFamily="@font/lato_regular"
-                tools:targetApi="jelly_bean"
-                android:textColor="@color/font_white"
-                android:textSize="50sp"/>
+            android:id="@+id/tv_battery_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/font_white"
+            android:textSize="50sp"
+            tools:targetApi="jelly_bean" />
 
     </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_battery_charging"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="110dp"
-            android:scaleType="center"
-            android:src="@drawable/ic_battery"
-            android:visibility="visible"
-            app:fabSize="auto"/>
+        android:id="@+id/fab_battery_charging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="110dp"
+        android:layout_marginRight="20dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_battery"
+        android:visibility="visible"
+        app:fabSize="auto" />
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/ll_top"
-            android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_top"
+        android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="@dimen/height_width_10dp"
-                android:layout_marginRight="@dimen/height_width_10dp"
-                app:cardUseCompatPadding="true">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_width_10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/height_width_10dp"
+            app:cardUseCompatPadding="true">
 
             <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-            >
-                <include layout="@layout/battery_sub_view"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/battery_sub_view" />
             </ScrollView>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

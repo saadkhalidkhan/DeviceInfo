@@ -16,23 +16,6 @@ public class FragmentUtil {
     public FragmentUtil(AppCompatActivity mActivity) {
         this.mActivity = mActivity;
     }
-
-    public void addFragment(final Fragment fragment, final boolean isAddToBackStack, final boolean shouldAnimate) {
-        pushFragment(fragment, null, R.id.fragment_container, isAddToBackStack, true, shouldAnimate, false);
-    }
-
-    public void replaceFragment(final Fragment fragment, final boolean isAddToBackStack, final boolean shouldAnimate) {
-        pushFragment(fragment, null, R.id.fragment_container, isAddToBackStack, false, shouldAnimate, false);
-    }
-
-    public void addFragmentIgnorIfCurrent(final Fragment fragment, final boolean isAddToBackStack, final boolean shouldAnimate) {
-        pushFragment(fragment, null, R.id.fragment_container, isAddToBackStack, true, shouldAnimate, true);
-    }
-
-    public void replaceFragmentIgnorIfCurrent(final Fragment fragment, final boolean isAddToBackStack, final boolean shouldAnimate) {
-        pushFragment(fragment, null, R.id.fragment_container, isAddToBackStack, false, shouldAnimate, true);
-    }
-
     //
 
     public void addChildFragment(final Fragment fragment, final Fragment parentFragment, final int containerId, final boolean isAddToBackStack, final boolean shouldAnimate) {
@@ -65,16 +48,6 @@ public class FragmentUtil {
         }
 
 
-        // Find current visible fragment
-        Fragment fragmentCurrent = fragmentManager.findFragmentById(R.id.fragment_container);
-
-        if (ignorIfCurrent && fragmentCurrent != null) {
-            if (fragment.getClass().getCanonicalName().equalsIgnoreCase(fragmentCurrent.getTag())) {
-                return;
-            }
-        }
-
-
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         if (shouldAnimate) {
@@ -84,27 +57,10 @@ public class FragmentUtil {
             fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         }
 
-        if (fragmentCurrent != null) {
-            fragmentTransaction.hide(fragmentCurrent);
-        }
-
         if (isAddToBackStack) {
             fragmentTransaction.addToBackStack(fragment.getClass().getCanonicalName());
         } else {
 
-           /* List<Fragment> fragmentList = fragmentManager.getFragments();
-            if (fragmentList != null && !fragmentList.isEmpty())
-            {
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                for (Fragment fragmentM : fragmentList)
-                {
-                    if (fragmentM != null)
-                    {
-                        fragmentTransaction.remove(fragmentM);
-                    }
-                }
-//                fragmentTransaction.commit();
-            }*/
         }
 
         if (isJustAdd) {
@@ -129,12 +85,6 @@ public class FragmentUtil {
             e.printStackTrace();
         }
 
-    }
-
-    public Fragment getCurrentFragment() {
-        FragmentManager fragmentManager = mActivity.getSupportFragmentManager();
-        // Find current visible fragment
-        return fragmentManager.findFragmentById(R.id.fragment_container);
     }
 
     public void clearBackStackFragmets() {
@@ -186,16 +136,6 @@ public class FragmentUtil {
 //        Methods.hideKeyboard();
 
 
-    }
-
-    public void addTabClildFragment(Fragment fragmentParent, Fragment fragmentChild) {
-        if (fragmentParent != null && fragmentChild != null) {
-            FragmentManager fragmentManager = fragmentParent.getChildFragmentManager();
-            clearBackStackFragmets(fragmentManager);
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.add(R.id.fragment_container, fragmentChild, fragmentChild.getClass().getCanonicalName());
-            fragmentTransaction.commit();
-        }
     }
 
     public void clearBackStackFragmets(final String tag) {

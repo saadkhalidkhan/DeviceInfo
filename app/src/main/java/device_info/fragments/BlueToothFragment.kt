@@ -75,8 +75,8 @@ class BlueToothFragment : BaseFragment() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val window = activity!!.window
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.statusBarColor = resources.getColor(R.color.dark_blue_one)
-            window.navigationBarColor = resources.getColor(R.color.dark_blue_one)
+            window.statusBarColor = ContextCompat.getColor(context!!, R.color.colorPrimary)
+            window.navigationBarColor = ContextCompat.getColor(context!!, R.color.colorPrimary)
 
         }
         return view;

@@ -54,8 +54,8 @@ public class DeviceInfoFragment extends Fragment {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getActivity().getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(getResources().getColor(R.color.device_color));
-            window.setNavigationBarColor(getResources().getColor(R.color.device_color));
+            window.setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+            window.setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
 
         }
 

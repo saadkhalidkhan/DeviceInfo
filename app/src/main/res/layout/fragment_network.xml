@@ -1,130 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:airbnb="http://schemas.android.com/apk/res-auto"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
     <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/height_width_10dp"
-            app:cardUseCompatPadding="true">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/height_width_10dp"
+        app:cardUseCompatPadding="true">
 
         <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
-            <TableRow android:gravity="start"
-                      android:background="@color/dark_sky_blue">
-
-                <TextView
-                        android:text="@string/feature_name"
-                        style="@style/txtFeatureName"/>
+            <TableRow
+                android:background="@color/colorPrimary"
+                android:gravity="start">
 
                 <TextView
-                        android:text="@string/feature_status"
-                        style="@style/txtFeatureName"/>
+                    style="@style/txtFeatureName"
+                    android:text="@string/feature_name" />
+
+                <TextView
+                    style="@style/txtFeatureName"
+                    android:text="@string/feature_status" />
 
             </TableRow>
 
 
-            <TableRow android:gravity="start"
-                      android:background="@color/colorWhite">
+            <TableRow
+                android:background="@color/colorWhite"
+                android:gravity="start">
 
                 <TextView
-                        android:text="@string/connection_status"
-                        style="@style/txtfeatureNameStyle"/>
+                    style="@style/txtfeatureNameStyle"
+                    android:text="@string/connection_status" />
 
                 <TextView
-                        android:id="@+id/tv_connection_status"
-                        style="@style/txtfeatureStyle"/>
+                    android:id="@+id/tv_connection_status"
+                    style="@style/txtfeatureStyle" />
 
             </TableRow>
 
 
-            <TableRow android:gravity="start"
-                      android:background="@color/colorDriver">
+            <TableRow
+                android:background="@color/colorDriver"
+                android:gravity="start">
 
                 <TextView
-                        android:text="@string/data_type"
-                        style="@style/txtfeatureNameStyle"/>
+                    style="@style/txtfeatureNameStyle"
+                    android:text="@string/data_type" />
 
                 <TextView
-                        android:id="@+id/tv_data_type"
-                        style="@style/txtfeatureStyle"/>
+                    android:id="@+id/tv_data_type"
+                    style="@style/txtfeatureStyle" />
 
             </TableRow>
 
 
-            <TableRow android:gravity="start"
-                      android:background="@color/colorWhite">
+            <TableRow
+                android:background="@color/colorWhite"
+                android:gravity="start">
 
                 <TextView
-                        android:text="@string/network_type"
-                        style="@style/txtfeatureNameStyle"/>
+                    style="@style/txtfeatureNameStyle"
+                    android:text="@string/network_type" />
 
                 <TextView
-                        android:id="@+id/tv_network_type"
-                        style="@style/txtfeatureStyle"/>
+                    android:id="@+id/tv_network_type"
+                    style="@style/txtfeatureStyle" />
 
             </TableRow>
 
 
-            <TableRow android:gravity="start"
-                      android:background="@color/colorDriver">
+            <TableRow
+                android:background="@color/colorDriver"
+                android:gravity="start">
 
                 <TextView
-                        android:text="@string/ip_address"
-                        style="@style/txtfeatureNameStyle"/>
+                    style="@style/txtfeatureNameStyle"
+                    android:text="@string/ip_address" />
 
                 <TextView
-                        android:id="@+id/tv_ip_address"
-                        style="@style/txtfeatureStyle"/>
-
-            </TableRow>
-            <TableRow android:gravity="start"
-                      android:background="@color/colorWhite">
-
-                <TextView
-                        android:text="@string/mac_address"
-                        style="@style/txtfeatureNameStyle"/>
-
-                <TextView
-                        android:id="@+id/tv_mac_address"
-                        style="@style/txtfeatureStyle"/>
+                    android:id="@+id/tv_ip_address"
+                    style="@style/txtfeatureStyle" />
 
             </TableRow>
 
-
-            <TableRow android:gravity="start"
-                      android:background="@color/colorDriver">
-
-                <TextView
-                        android:text="@string/ssid"
-                        style="@style/txtfeatureNameStyle"/>
+            <TableRow
+                android:background="@color/colorWhite"
+                android:gravity="start">
 
                 <TextView
-                        android:id="@+id/tv_ssid"
-                        style="@style/txtfeatureStyle"/>
+                    style="@style/txtfeatureNameStyle"
+                    android:text="@string/mac_address" />
+
+                <TextView
+                    android:id="@+id/tv_mac_address"
+                    style="@style/txtfeatureStyle" />
 
             </TableRow>
 
 
-            <TableRow android:gravity="start"
-                      android:background="@color/colorWhite">
+            <TableRow
+                android:background="@color/colorDriver"
+                android:gravity="start">
 
                 <TextView
-                        android:text="@string/link_speed"
-                        style="@style/txtfeatureNameStyle"/>
+                    style="@style/txtfeatureNameStyle"
+                    android:text="@string/ssid" />
 
                 <TextView
-                        android:id="@+id/tv_link_speed"
-                        style="@style/txtfeatureStyle"/>
+                    android:id="@+id/tv_ssid"
+                    style="@style/txtfeatureStyle" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:background="@color/colorWhite"
+                android:gravity="start">
+
+                <TextView
+                    style="@style/txtfeatureNameStyle"
+                    android:text="@string/link_speed" />
+
+                <TextView
+                    android:id="@+id/tv_link_speed"
+                    style="@style/txtfeatureStyle" />
 
             </TableRow>
 

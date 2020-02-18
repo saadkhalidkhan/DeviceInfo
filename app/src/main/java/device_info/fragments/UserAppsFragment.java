@@ -2,19 +2,21 @@ package device_info.fragments;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.*;
-
 import com.droidgeeks.deviceinfo.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
 import device_info.adapters.AppsListAdapter;
 import device_info.utils.AppConst;
 
@@ -38,8 +40,8 @@ public class UserAppsFragment extends BaseFragment {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getActivity().getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(getResources().getColor(R.color.dark_parrot_green_blue));
-            window.setNavigationBarColor(getResources().getColor(R.color.dark_parrot_green_blue));
+            window.setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+            window.setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
 
         }
         initUI();

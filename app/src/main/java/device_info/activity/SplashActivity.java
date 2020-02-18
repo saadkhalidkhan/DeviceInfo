@@ -27,12 +27,9 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-
         mHandler.postDelayed(mPendingLauncherRunnable, 2000);
 
-
     }
-
 
     private final Runnable mPendingLauncherRunnable = new Runnable() {
         @Override

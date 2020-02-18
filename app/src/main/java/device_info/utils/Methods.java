@@ -41,7 +41,6 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 import device_info.activity.HomeActivity;
-import device_info.activity.MainActivity;
 
 public class Methods {
 
@@ -95,27 +94,7 @@ public class Methods {
             }
         }, DELAY_IN_MS);
     }
-
-    /**
-     * @param mainActivity use for get applicationContext
-     * @param dp           value to convert into px
-     * @return converted px from dp value
-     */
-    public static int dpToPx(MainActivity mainActivity, int dp) {
-        DisplayMetrics displayMetrics = mainActivity.getResources().getDisplayMetrics();
-        return Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
-    }
-
-    /**
-     * @param mainActivity use for get applicationContext
-     * @param px           value to convert into dp
-     * @return converted dp from px value
-     */
-    public static int pxToDp(MainActivity mainActivity, int px) {
-        DisplayMetrics displayMetrics = mainActivity.getResources().getDisplayMetrics();
-        return Math.round(px / (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
-    }
-
+    
     /**
      * Share using intent.
      *

@@ -17,6 +17,7 @@ import android.widget.RatingBar.OnRatingBarChangeListener
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.droidgeeks.deviceinfo.BuildConfig
 import com.droidgeeks.deviceinfo.R
 import device_info.utils.KeyUtil
@@ -44,8 +45,8 @@ class AboutUsFragment : BaseFragment(), View.OnClickListener {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val window = activity!!.window
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.statusBarColor = resources.getColor(R.color.colorPrimaryDark)
-            window.navigationBarColor = resources.getColor(R.color.colorPrimaryDark)
+            window.statusBarColor = ContextCompat.getColor(context!!, R.color.colorPrimary)
+            window.navigationBarColor = ContextCompat.getColor(context!!, R.color.colorPrimary)
 
         }
 

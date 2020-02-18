@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import com.droidgeeks.deviceinfo.R
 import kotlinx.android.synthetic.main.fragment_phone_features.*
 
@@ -58,8 +59,8 @@ class PhoneFeaturesFragment : BaseFragment() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val window = activity!!.window
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.statusBarColor = resources.getColor(R.color.dark_brown)
-            window.navigationBarColor = resources.getColor(R.color.dark_brown)
+            window.statusBarColor = ContextCompat.getColor(context!!, R.color.colorPrimary)
+            window.navigationBarColor = ContextCompat.getColor(context!!, R.color.colorPrimary)
 
         }
         ivMenu = view.findViewById(R.id.iv_menu)

@@ -1,47 +1,48 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              tools:context="device_info.activity.MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="device_info.activity.HomeActivity">
+
     <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            app:cardUseCompatPadding="true">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <ImageView
-                    android:id="@+id/iv_os_ver_ic"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center_horizontal"
-                    android:contentDescription="@null"
-                    android:src="@drawable/ic_android_logo"/>
+                android:id="@+id/iv_os_ver_ic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_android_logo" />
 
 
             <TextView
-                    android:id="@+id/tv_version_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/textViewLarge"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/height_width_10dp"
-                    android:textAllCaps="true"/>
+                android:id="@+id/tv_version_name"
+                style="@style/textViewLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/height_width_10dp"
+                android:textAllCaps="true" />
+
             <TextView
-                    android:id="@+id/tv_release_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/textViewSimpleMediam"
-                    android:layout_marginBottom="@dimen/height_width_10dp"
-                    android:layout_gravity="center_horizontal"
-            />
+                android:id="@+id/tv_release_date"
+                style="@style/textViewSimpleMediam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/height_width_10dp" />
 
 
         </LinearLayout>
@@ -50,118 +51,123 @@
 
 
     <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            app:cardUseCompatPadding="true"
-    >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-        >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    tools:ignore="UselessParent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/dark_blue">
-
-                    <TextView
-                            android:text="@string/feature_name"
-                            style="@style/txtFeatureName"/>
+                <TableRow
+                    android:background="@color/colorPrimary"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/feature_status"
-                            style="@style/txtFeatureName"/>
+                        style="@style/txtFeatureName"
+                        android:text="@string/feature_name" />
+
+                    <TextView
+                        style="@style/txtFeatureName"
+                        android:text="@string/feature_status" />
 
                 </TableRow>
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/colorWhite">
+                <TableRow
+                    android:background="@color/colorWhite"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/version"
-                            style="@style/txtfeatureNameStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/version" />
 
                     <TextView
-                            android:id="@+id/tv_version"
-                            style="@style/txtfeatureStyle"/>
+                        android:id="@+id/tv_version"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/colorDriver">
+                <TableRow
+                    android:background="@color/colorDriver"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/version_name"
-                            style="@style/txtfeatureNameStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/version_name" />
 
                     <TextView
-                            android:id="@+id/tv_sdk_name"
-                            style="@style/txtfeatureStyle"/>
+                        android:id="@+id/tv_sdk_name"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/colorWhite">
+                <TableRow
+                    android:background="@color/colorWhite"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/api_level"
-                            style="@style/txtfeatureNameStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/api_level" />
 
                     <TextView
-                            android:id="@+id/tv_api_level"
-                            style="@style/txtfeatureStyle"/>
+                        android:id="@+id/tv_api_level"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/colorDriver">
+                <TableRow
+                    android:background="@color/colorDriver"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/build_id"
-                            style="@style/txtfeatureNameStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/build_id" />
 
                     <TextView
-                            android:id="@+id/tv_build_id"
-                            style="@style/txtfeatureStyle"/>
+                        android:id="@+id/tv_build_id"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/colorWhite">
+                <TableRow
+                    android:background="@color/colorWhite"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/build_name"
-                            style="@style/txtfeatureNameStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/build_name" />
 
                     <TextView
-                            android:id="@+id/tv_build_time"
-                            style="@style/txtfeatureStyle"/>
+                        android:id="@+id/tv_build_time"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/colorDriver">
+                <TableRow
+                    android:background="@color/colorDriver"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/fingerprint"
-                            style="@style/txtfeatureNameStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/fingerprint" />
 
                     <TextView
-                            android:id="@+id/tv_fingerprint"
-                            style="@style/txtfeatureStyle"/>
+                        android:id="@+id/tv_fingerprint"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 

@@ -1,159 +1,148 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              tools:context="device_info.activity.MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="device_info.activity.HomeActivity">
 
 
     <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            app:cardUseCompatPadding="true">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-        >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    tools:ignore="UselessParent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/device_color">
-
-                    <TextView
-                            android:text="@string/feature_name"
-                            style="@style/txtFeatureName"/>
+                <TableRow
+                    android:background="@color/colorPrimary"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/feature_status"
-                            style="@style/txtFeatureName"/>
+                        style="@style/txtFeatureName"
+                        android:text="@string/feature_name" />
+
+                    <TextView
+                        style="@style/txtFeatureName"
+                        android:text="@string/feature_status" />
 
                 </TableRow>
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/colorWhite">
+                <TableRow
+                    android:background="@color/colorWhite"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/device_name"
-                            style="@style/txtfeatureNameStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/device_name" />
 
                     <TextView
-                            android:id="@+id/txt_dvice_info"
-                            style="@style/txtfeatureStyle"/>
+                        android:id="@+id/txt_dvice_info"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/device_color">
+                <TableRow
+                    android:background="@color/colorPrimary"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/device_model"
+                        style="@style/txtfeatureNameStyle"
 
-                            style="@style/txtfeatureNameStyle"/>
+                        android:text="@string/device_model" />
 
                     <TextView
-                            android:id="@+id/txt_model"
-                            style="@style/txtfeatureStyle"/>
+                        android:id="@+id/txt_model"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/colorWhite">
+                <TableRow
+                    android:background="@color/colorWhite"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/device_manufacturer"
-                            style="@style/txtfeatureNameStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/device_manufacturer" />
 
                     <TextView
-                            android:id="@+id/txt_manufacutrer"
-                            style="@style/txtfeatureStyle"/>
+                        android:id="@+id/txt_manufacutrer"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 
 
-
-                <TableRow android:gravity="start"
-                          android:background="@color/device_color">
-
-                    <TextView
-                            android:text="@string/device_devices"
-                            style="@style/txtfeatureNameStyle"/>
+                <TableRow
+                    android:background="@color/colorPrimary"
+                    android:gravity="start">
 
                     <TextView
-                            android:id="@+id/txtDevice"
-                            style="@style/txtfeatureStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/device_devices" />
+
+                    <TextView
+                        android:id="@+id/txtDevice"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/colorWhite">
+                <TableRow
+                    android:background="@color/colorWhite"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/hardware"
-                            style="@style/txtfeatureNameStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/hardware" />
 
                     <TextView
-                            android:id="@+id/txt_hardware"
-                            style="@style/txtfeatureStyle"/>
+                        android:id="@+id/txt_hardware"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 
 
-                <TableRow android:gravity="start"
-                          android:background="@color/device_color">
+                <TableRow
+                    android:background="@color/colorPrimary"
+                    android:gravity="start">
 
                     <TextView
-                            android:text="@string/device_board"
-                            style="@style/txtfeatureNameStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/device_board" />
 
                     <TextView
-                            android:id="@+id/txt_device_board"
-                            style="@style/txtfeatureStyle"/>
+                        android:id="@+id/txt_device_board"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
 
 
-
-
-                <TableRow android:gravity="start"
-                          android:background="@color/colorWhite">
-
-                    <TextView
-                            android:text="@string/android_id"
-                            style="@style/txtfeatureNameStyle"/>
+                <TableRow
+                    android:background="@color/colorWhite"
+                    android:gravity="start">
 
                     <TextView
-                            android:id="@+id/txt_android_id"
-                            style="@style/txtfeatureStyle"/>
+                        style="@style/txtfeatureNameStyle"
+                        android:text="@string/android_id" />
+
+                    <TextView
+                        android:id="@+id/txt_android_id"
+                        style="@style/txtfeatureStyle" />
 
                 </TableRow>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             </TableLayout>

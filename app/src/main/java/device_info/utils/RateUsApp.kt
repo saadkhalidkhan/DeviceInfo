@@ -5,7 +5,7 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
-import device_info.activity.MainActivity
+import device_info.activity.HomeActivity
 
 /**
  * Created by akif on 10/13/17.
@@ -13,7 +13,7 @@ import device_info.activity.MainActivity
 class RateUsApp {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     companion object {
-        fun rateUsApp(mActivity: MainActivity) {
+        fun rateUsApp(mActivity: HomeActivity) {
             val uri = Uri.parse("market://details?id=com.droidgeeks.deviceinfo")
             val goToMarket = Intent(Intent.ACTION_VIEW, uri)
             goToMarket.addFlags(

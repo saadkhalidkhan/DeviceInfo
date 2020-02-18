@@ -53,8 +53,8 @@ class StorageFragment : BaseFragment() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val window = activity!!.window
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.statusBarColor = resources.getColor(R.color.dark_red)
-            window.navigationBarColor = resources.getColor(R.color.dark_red)
+            window.statusBarColor = ContextCompat.getColor(context!!, R.color.colorPrimary)
+            window.navigationBarColor = ContextCompat.getColor(context!!, R.color.colorPrimary)
 
         }
 

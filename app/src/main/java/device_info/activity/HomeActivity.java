@@ -47,7 +47,7 @@ import device_info.utils.Methods;
 public class HomeActivity extends AppCompatActivity {
 
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = HomeActivity.class.getSimpleName();
 
 
     @BindView(R.id.bottom_sheet)
@@ -149,59 +149,41 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
-
     public void selectedButton(String selectedValue) {
         txtTile.setText(selectedValue);
         if (getResources().getString(R.string.device).equals(selectedValue)) {
             replicasFragments(new HomesFragment());
-            rlMenu.setBackgroundResource(R.color.colorPrimary);
         } else if (getResources().getString(R.string.mobile_info).equals(selectedValue)) {
             replicasFragments(new DeviceInfoFragment());
-            rlMenu.setBackgroundResource(R.color.colorPrimary);
         } else if (getResources().getString(R.string.os).equals(selectedValue)) {
             replicasFragments(new OSFragment());
-            rlMenu.setBackgroundResource(R.color.dark_blue);
         } else if (getResources().getString(R.string.sensor).equals(selectedValue)) {
             replicasFragments(new SensorCategoryFragment());
-            rlMenu.setBackgroundResource(R.color.dark_purple);
         } else if (getResources().getString(R.string.processor_label).equals(selectedValue)) {
             replicasFragments(new CPUFragment());
-            rlMenu.setBackgroundResource(R.color.dark_violet);
         } else if (getResources().getString(R.string.battery).equals(selectedValue)) {
             replicasFragments(new BatteryFragment());
-            rlMenu.setBackgroundResource(R.color.dark_green);
         } else if (getResources().getString(R.string.network).equals(selectedValue)) {
             replicasFragments(new NetworkFragment());
-            rlMenu.setBackgroundResource(R.color.dark_sky_blue);
         } else if (getResources().getString(R.string.sim).equals(selectedValue)) {
             replicasFragments(new SimFragment());
-            rlMenu.setBackgroundResource(R.color.dark_parrot_green);
         } else if (getResources().getString(R.string.camera).equals(selectedValue)) {
             replicasFragments(new CameraFragment());
-            rlMenu.setBackgroundResource(R.color.dark_green_blue);
         } else if (getResources().getString(R.string.storage).equals(selectedValue)) {
             replicasFragments(new StorageFragment());
-            rlMenu.setBackgroundResource(R.color.dark_red);
         } else if (getResources().getString(R.string.bluetooth).equals(selectedValue)) {
             replicasFragments(new BlueToothFragment());
-            rlMenu.setBackgroundResource(R.color.dark_blue_one);
         } else if (getResources().getString(R.string.display).equals(selectedValue)) {
             replicasFragments(new DisplayFragment());
-            rlMenu.setBackgroundResource(R.color.dark_violet_one);
         } else if (getResources().getString(R.string.features).equals(selectedValue)) {
             replicasFragments(new PhoneFeaturesFragment());
 
-            rlMenu.setBackgroundResource(R.color.dark_brown);
         } else if (getResources().getString(R.string.user_apps).equals(selectedValue)) {
             replicasFragments(new UserAppsFragment());
-            rlMenu.setBackgroundResource(R.color.dark_parrot_green_blue);
         } else if (getResources().getString(R.string.system_apps).equals(selectedValue)) {
             replicasFragments(new SystemAppsFragment());
-            rlMenu.setBackgroundResource(R.color.dark_parrot_green_blue);
         } else if (getResources().getString(R.string.about_us).equals(selectedValue)) {
             replicasFragments(new AboutUsFragment());
-            rlMenu.setBackgroundResource(R.color.colorPrimaryDark);
-
         } else if (getResources().getString(R.string.share).equals(selectedValue)) {
             Methods.sharing("https://play.google.com/store/apps/details?id=com.master.deviceinfo");
         }
